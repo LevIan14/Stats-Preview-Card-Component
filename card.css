@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+html, body, *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 15px;
+}
+
+/* Mobile */
+.card {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(244, 38%, 16%);
+    height: 100%;
+    border-radius: 1rem;
+}
+
+#img-card {
+    border-radius: 1rem;
+    background: linear-gradient(hsla(277, 100%, 25%, .514) 100%, rgba(255, 255, 255, 0)), url('image-header-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 250px;
+}
+
+#span-insight {
+    color: hsl(277, 64%, 61%);
+}
+
+.card-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.card-desc > p {
+    margin-top: 24px;
+    line-height: 1.8rem;
+}
+
+.card-desc p {
+    color: hsla(0, 0%, 100%, 0.75)
+}
+
+.stat-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.stat-container > h1 {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.stat-container p {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Web */
+@media screen and (min-width: 1440px) {
+    .card {
+        flex-direction: row-reverse;
+    }
+
+    #img-card {
+        background: linear-gradient(hsla(277, 100%, 25%, .514) 100%, rgba(255, 255, 255, 0)), url('image-header-desktop.jpg');
+        background-size: cover;
+        height: auto;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .card-desc {
+        padding: 4rem;
+        text-align: left;
+    }
+
+    .stat-container {
+        margin-top: 4rem;
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
